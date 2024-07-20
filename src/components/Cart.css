@@ -1,0 +1,43 @@
+.my-shopping-cart {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 30px;
+  }
+  
+  .cart-item-image {
+    width: 300px;
+    height: 300px;
+    aspect-ratio: 1;
+  }
+  
+  .quantity-input {
+    width: 60px;
+    text-align: center;
+  }
+  
+  .quantity-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .quantity-control .btn {
+    margin: 0 5px;
+  }
+  
+  .table td, .table th {
+    vertical-align: middle;
+  }
+  
+  .cartcontainer {
+    margin-bottom: 40px;
+  }
+
+  .cart-title {
+    font-size: 20px
+  }
+
+
+  .cart-button {
+    gap: 10px;
+  }

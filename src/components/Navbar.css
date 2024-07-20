@@ -1,0 +1,135 @@
+.navbar-container {
+  position: relative;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  background: linear-gradient(135deg, #001d3d,#054b59, #07869f);
+}
+
+.navbar-logo{
+  width: 130px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #001b37;
+}
+
+.navbar-brand-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+  color: white;
+  text-decoration: none;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 15px;
+  color: white;
+}
+
+.back-button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.back-button:hover {
+  background-color: #8a8a8a;
+}
+
+
+
+.navbar-brand:hover,
+.navbar-brand:focus,
+.navbar-brand:active {
+  color: white;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.nav-link:hover {
+  color: #808080 !important;
+}
+
+@media (min-width: 992px) {
+  .navbar .navbar-collapse {
+    flex-grow: 1;
+    align-items: center;
+  }
+
+  .navbar .navbar-nav {
+    margin-left: auto;
+  }
+}
+
+/* Make the hamburger icon stick to the top left corner when scrolling */
+.menu-toggle.sticky {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  color: black;
+}
+
+@media (min-width: 992px) {
+  .menu-toggle {
+    position: relative;
+    top: auto;
+    left: auto;
+    z-index: auto;
+  }
+}
+
+form {
+  display: flex;
+}
+
+/* .navbar {
+  background-color: black !important;
+} */
+
+.searchbarcontainer {
+  width: 400px;
+  gap: 5px;
+}
+
+.searchbar {
+  border-radius: 25px 0px 0px 25px;
+}
+
+.search-button {
+  border-radius: 0 25px 25px 0px;
+  border: 1px solid white;
+  color: white;
+}
+
+.search-button:hover {
+  background-color: #07869f;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.user-icon {
+  margin-right: 5px;
+}
