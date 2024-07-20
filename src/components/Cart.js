@@ -1,12 +1,9 @@
-// Cart.js
-
 import React from 'react';
 import { Container, Row, Col, Button, Table, Form } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import './Cart.css';
 
 const Cart = ({ cartItems, removeFromCart, updateQuantity }) => {
-
   const navigate = useNavigate();
   const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
   const discount = 0; // Add your discount logic here
@@ -22,8 +19,12 @@ const Cart = ({ cartItems, removeFromCart, updateQuantity }) => {
     }
   };
 
+  const handleCheckout = () => {
+    navigate('/checkout', { state: { total: (totalPrice - discount + tax).toFixed(2) } });
+  };
+
   return (
-    <Container className='cartcontainer'>
+    <Container className='cart-container'>
       <h2 className="my-shopping-cart">My Shopping Cart</h2>
       <Table responsive>
         <thead>
@@ -45,15 +46,15 @@ const Cart = ({ cartItems, removeFromCart, updateQuantity }) => {
               <tr key={item.id}>
                 <td>
                   <Row>
-                    <Col md={6}>
+                    <Col md={4}>
                       <img src={item.image} alt={item.name} className="cart-item-image" />
                     </Col>
-                    <Col md={3}>
+                    <Col md={8}>
                       <h5>{item.name}</h5>
                     </Col>
                   </Row>
                 </td>
-                <td>${item.price.toFixed(2)}</td>
+                <td>&#8377;{item.price.toFixed(2)}</td>
                 <td>
                   <div className="quantity-control">
                     <Button variant="secondary" onClick={() => decreaseQuantity(item)}>-</Button>
@@ -107,8 +108,8 @@ const Cart = ({ cartItems, removeFromCart, updateQuantity }) => {
               </tr>
             </tbody>
           </Table>
-          <div className='cart-button'>
-            <Button variant="success" className="mr-2">Checkout</Button>
+          <div className='cart-buttons'>
+            <Button variant="success" className="mr-2" onClick={handleCheckout}>Checkout</Button>
             <Button variant="secondary" onClick={() => navigate(-1)}>Continue Shopping</Button>
           </div>
         </Col>

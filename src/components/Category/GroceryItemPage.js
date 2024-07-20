@@ -6,7 +6,7 @@ import {
   // Vegitables 
   tomato,potato,onion,carrot,cauliflower,capsicum,cucumber,ginger,ladiesfinger,garlic,corianderleave,corn,
   // fruits
-  
+  apple,banana,avacado,cherry,grape,guava,mango,orange,pineapple,pomegranate,watermelon,jackfruit,
 } from '../images.js'
 import './GroceryItemPage.css';
 
@@ -27,8 +27,18 @@ const itemDetails = {
       // Add more items as needed
     ],
     'Fresh Fruits': [
-      { id: 'apple', name: 'Apples - 1kg', price: 20, image: 'path_to_image' },
-      { id: 'banana', name: 'Bananas - 1kg', price: 50, image: 'path_to_image' },
+      { id: 'apple', name: 'Apples - 1kg', price: 120, image: apple },
+      { id: 'banana', name: 'Bananas - 1kg', price: 50, image: banana },
+      { id: 'avacado', name: 'Avacado - 1kg', price: 80, image: avacado },
+      { id: 'cherry', name: 'Cherry - 500g', price: 100, image: cherry  },
+      { id: 'grape', name: 'Grape - 1kg', price: 40, image: grape  },
+      { id: 'guava', name: 'Guava - 500g', price: 40, image: guava },
+      { id: 'mango', name: 'Mango - 1kg', price: 90, image: mango },
+      { id: 'orange', name: 'Orange - 1kg', price: 80, image: orange  },
+      { id: 'pineapple', name: 'Pineapple - 1', price: 60, image: pineapple },
+      { id: 'pomegranate', name: 'pomegranate - 1kg', price: 100, image: pomegranate },
+      { id: 'watermelon', name: 'watermelon - 1', price: 40, image: watermelon  },
+      { id: 'jackfruit', name: 'jackfruit - 1', price: 50, image: jackfruit },
       // Add more items as needed
     ],
     // Add more categories as needed

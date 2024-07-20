@@ -1,10 +1,15 @@
 import React from 'react';
-import productimg from '../images/product3.jpg';
+import productimg from '../images/product3.png';
 import productslide from '../images/slide6.png';
 import { FaShoppingCart } from 'react-icons/fa';
-import samsunglogo from '../images/AppliancesImg/samsung.png';
-import xiaomilogo from '../images/AppliancesImg/xiaomi.png';
 import './Electronics.css';
+
+import {
+  Fan,Sbuds,SonyHeadphone,washingmech,LgAc,Lgfridge,windowAC,
+  AppCombo,Designlap,macbookair,tufgaming,Stv,Swashing,Sfridge,Svacuum,
+  Samsungs23,googlepixel7,Oneplus11,iphone14pro,samsunglogo,xiaomilogo,applelogo,onepluslogo,realmelogo,
+  boatlogo,fireboulylogo,asuslogo,
+} from '../images.js'
 
 const categoryData = {
   title: 'Electronics',
@@ -12,16 +17,20 @@ const categoryData = {
   image: productslide,
   brands: [
     { name: 'Samsung', logo: samsunglogo },
-    { name: 'Boat', logo: productimg },
+    { name: 'Boat', logo: boatlogo },
     { name: 'Xiaomi', logo: xiaomilogo},
-    { name: 'Asus', logo: productimg },
-    { name: 'FireBoult', logo: productimg },
+    { name: 'Asus', logo: asuslogo},
+    { name: 'FireBoult', logo: fireboulylogo },
   ],
   products: [
-    { id: 1, name: 'Product 1', mrp: '100', price: 80, image: productimg },
-    { id: 2, name: 'Product 2', mrp: '200', price: 160, image: productimg },
-    { id: 3, name: 'Product 3', mrp: '300', price: 240, image: productimg },
-    { id: 4, name: 'Product 4', mrp: '400', price: 320, image: productimg },
+  { id: 'Headphones', name: 'Headphones', description: 'Noise Cancelling Headphones', image: SonyHeadphone, price: 200, mrp: 250 },
+  { id: 'Designer lap', name: 'Designer Lap',mrp: '100000', price: 80000, image: Designlap },
+  { id: 'macbookair', name: 'Macbook AIr',mrp: '100000', price: 80000, image: macbookair },
+  { id: 'tufgaming', name: 'Tuf Gaming',mrp: '100000', price: 80000, image: tufgaming},
+  { id: 'Fan', name: 'Fan',mrp: '1000', price: 800, image: Fan },
+  { id: 'Samsung Buds Headphone', name: 'Samsung Buds',mrp: '8000', price: 7000, image: Sbuds },
+  { id: 'Lg Window Ac', name: 'Lg Window Ac',mrp: '100000', price: 80000, image: windowAC },
+  { id: 'Sony OvertheEar Headphone', name: 'Sony Headphone',mrp: '100000', price: 80000, image:SonyHeadphone},
     // Add more products as needed
   ]
 };

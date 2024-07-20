@@ -1,43 +1,52 @@
 .my-shopping-cart {
-    text-align: center;
-    margin: 20px 0;
-    font-size: 30px;
-  }
-  
-  .cart-item-image {
-    width: 300px;
-    height: 300px;
-    aspect-ratio: 1;
-  }
-  
-  .quantity-input {
-    width: 60px;
-    text-align: center;
-  }
-  
-  .quantity-control {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .quantity-control .btn {
-    margin: 0 5px;
-  }
-  
-  .table td, .table th {
-    vertical-align: middle;
-  }
-  
-  .cartcontainer {
-    margin-bottom: 40px;
-  }
+  text-align: center;
+  margin: 20px 0;
+  font-size: 30px;
+  color: #333;
+}
 
-  .cart-title {
-    font-size: 20px
-  }
+.cart-item-image {
+  width: 100%;
+  height: auto;
+  max-width: 150px;
+  border-radius: 10px;
+}
 
+.quantity-input {
+  width: 60px;
+  text-align: center;
+  margin: 0 10px;
+}
 
-  .cart-button {
-    gap: 10px;
-  }
+.quantity-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantity-control .btn {
+  margin: 0 5px;
+}
+
+.table td, .table th {
+  vertical-align: middle;
+}
+
+.cart-container {
+  margin-bottom: 40px;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.cart-title {
+  font-size: 20px;
+  background-color: #007bff;
+  color: white;
+}
+
+.cart-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}

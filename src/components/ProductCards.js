@@ -1,41 +1,47 @@
 import React from 'react';
 import { Card, Button, Container, Row, Col } from 'react-bootstrap';
 import { FaShoppingCart } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import './ProductCards.css';
-import product1 from './images/product1.jpg';
-import product2 from './images/product2.jpg';
-import product3 from './images/product1.jpg';
-import product4 from './images/product2.jpg';
+import { AppCombo, Designlap, macbookair, tufgaming, Stv, Swashing, Sfridge, Svacuum, Fan, Sbuds, SonyHeadphone, washingmech, LgAc, Lgfridge, windowAC } from './images.js';
 
-// Export the product categories
 export const productCategories = [
   {
-    title: 'Category 1',
+    title: 'General 1',
     products: [
-      { id: 1, name: 'Product 1', description: 'Description 1', image: product1, price: 100, mrp: 120 },
-      { id: 2, name: 'Product 2', description: 'Description 2', image: product2, price: 100, mrp: 120 },
-      { id: 3, name: 'Product 3', description: 'Description 3', image: product3, price: 100, mrp: 120 },
-      { id: 4, name: 'Product 4', description: 'Description 4', image: product4, price: 100, mrp: 120 },
-    ]
+      { id: 'Fan', name: 'Fan', mrp: '1000', price: 800, image: Fan },
+      { id: 'Samsung Buds Headphone', name: 'Samsung Buds', mrp: '8000', price: 7000, image: Sbuds },
+      { id: 'Lg Window Ac', name: 'Lg Window Ac', mrp: '100000', price: 80000, image: windowAC },
+      { id: 'Sony OvertheEar Headphone', name: 'Sony Headphone', mrp: '100000', price: 80000, image: SonyHeadphone },
+    ],
   },
   {
-    title: 'Category 2',
+    title: 'General 2',
     products: [
-      { id: 5, name: 'Product 5', description: 'Description 5', image: product1, price: 100, mrp: 120 },
-      { id: 6, name: 'Product 6', description: 'Description 6', image: product2, price: 100, mrp: 120 },
-      { id: 7, name: 'Product 7', description: 'Description 7', image: product3, price: 100, mrp: 120 },
-      { id: 8, name: 'Product 8', description: 'Description 8', image: product4, price: 100, mrp: 120 },
-    ]
+      { id: 'Refrigerator', name: 'Refrigerator', description: 'Double Door Refrigerator', image: Lgfridge, price: 50000, mrp: 60000 },
+      { id: 'Washing Machine', name: 'Washing Machine', description: 'Washing Machine', image: washingmech, price: 15000, mrp: 20000 },
+      { id: 'Home Combo', name: 'Home Combo', mrp: '100000', price: 80000, image: AppCombo },
+      { id: 'Samsung Fridge', name: 'Samsung Fridge', mrp: '100000', price: 80000, image: Sfridge },
+    ],
   },
   {
-    title: 'Category 3',
+    title: 'General 3',
     products: [
-      { id: 9, name: 'Product 9', description: 'Description 9', image: product1, price: 100, mrp: 120 },
-      { id: 10, name: 'Product 10', description: 'Description 10', image: product2, price: 100, mrp: 120 },
-      { id: 11, name: 'Product 11', description: 'Description 11', image: product3, price: 100, mrp: 120 },
-      { id: 12, name: 'Product 12', description: 'Description 12', image: product4, price: 100, mrp: 120 },
-    ]
-  }
+      { id: 'Home Combo', name: 'Home Combo', mrp: '100000', price: 80000, image: AppCombo },
+      { id: 'Designer lap', name: 'Designer Lap', mrp: '100000', price: 80000, image: Designlap },
+      { id: 'macbookair', name: 'Macbook AIr', mrp: '100000', price: 80000, image: macbookair },
+      { id: 'tufgaming', name: 'Tuf Gaming', mrp: '100000', price: 80000, image: tufgaming },
+    ],
+  },
+  {
+    title: 'Samsung Products',
+    products: [
+      { id: 'Samsung Fridge', name: 'Samsung Fridge', mrp: '100000', price: 80000, image: Sfridge },
+      { id: 'Samsung Washing', name: 'Samsung Washing', mrp: '20000', price: 16000, image: Swashing },
+      { id: 'Samsung tv', name: 'Samsung tv', mrp: '300000', price: 240000, image: Stv },
+      { id: 'Samsung vacuum', name: 'Samsung Vacuum', mrp: '400', price: 320, image: Svacuum },
+    ],
+  },
 ];
 
 function ProductCards({ addToCart }) {
@@ -48,9 +54,11 @@ function ProductCards({ addToCart }) {
             {category.products.map(product => (
               <Col md={3} className="d-flex align-items-stretch" key={product.id}>
                 <Card className="product-card">
-                  <div className="product-card-image-container">
-                    <Card.Img variant="top" src={product.image} className="product-card-image" />
-                  </div>
+                  <Link to={`/product/${product.id}`}>
+                    <div className="product-card-image-container">
+                      <Card.Img variant="top" src={product.image} className="product-card-image" />
+                    </div>
+                  </Link>
                   <Card.Body className="product-card-body">
                     <Card.Title className="product-card-name">{product.name}</Card.Title>
                     <Card.Text className="product-card-description">{product.description}</Card.Text>

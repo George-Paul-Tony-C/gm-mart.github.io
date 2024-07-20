@@ -1,20 +1,23 @@
 import React from 'react';
-import productimg from '../images/product3.jpg';
+import productimg from '../images/product3.png';
 import productslide from '../images/AppliancesImg/appliances1.png';
-import samsunglogo from '../images/AppliancesImg/samsung.png';
-import LGlogo from '../images/AppliancesImg/LG.png';
-import xiaomilogo from '../images/AppliancesImg/xiaomi.png';
-import panasoniclogo from '../images/AppliancesImg/panasonic.png';
-import whirlpoollogo from '../images/AppliancesImg/whirlpool.png';
 import { FaShoppingCart } from 'react-icons/fa';
 import './Appliances.css';
 
-// Products Images Import Section
-import samsungvacuum from '../images/AppliancesImg/Samsung/Svacuum.webp'
-import samsungwashing from '../images/AppliancesImg/Samsung/Swashing.webp'
-import samsungtv from '../images/AppliancesImg/Samsung/Stv.webp'
-import samsungfridge from '../images/AppliancesImg/Samsung/Sfridge.webp'
-// end
+import {
+  
+  // Vegitables 
+  tomato,potato,onion,carrot,cauliflower,capsicum,cucumber,ginger,ladiesfinger,garlic,corianderleave,corn,
+  // fruits
+  apple,banana,avacado,cherry,grape,guava,mango,orange,pineapple,pomegranate,watermelon,jackfruit,
+  // Fashion
+  Tshirt,shirt,
+  // electronics and Appliances
+  Fan,Sbuds,SonyHeadphone,washingmech,LgAc,Lgfridge,windowAC,
+  AppCombo,Designlap,macbookair,tufgaming,Stv,Swashing,Sfridge,Svacuum,
+  Samsungs23,googlepixel7,Oneplus11,iphone14pro,samsunglogo,xiaomilogo,applelogo,onepluslogo,realmelogo,
+  panasoniclogo,whirlpoollogo ,LGlogo,
+} from '../images.js';
 
 const categoryData = {
   title: 'Appliances',
@@ -28,13 +31,13 @@ const categoryData = {
     { name: 'Whirlpool', logo: whirlpoollogo },
   ],
   products: [
-    { id: 'Samsung Fridge', name: 'Samsung Fridge', mrp: '100000', price: 80000, image: samsungfridge },
-    { id: 'Samsung Washing', name: 'Samsung Washing', mrp: '20000', price: 16000, image: samsungwashing },
-    { id: 'Samsung tv', name: 'Samsung tv', mrp: '300000', price: 240000, image: samsungtv },
-    { id: 'Samsung vacuum', name: 'Samsung Vacuum', mrp: '400', price: 320, image: samsungvacuum },
-    { id: 'Appliance 1', name: 'Appliance 1', mrp: '100', price: 80, image: productimg },
-    { id: 'Appliance 2', name: 'Appliance 2', mrp: '200', price: 160, image: productimg },
-    { id: 'Appliance 3', name: 'Appliance 3', mrp: '300', price: 240, image: productimg },
+    { id: 'Samsung Fridge', name: 'Samsung Fridge', mrp: '100000', price: 80000, image: Sfridge },
+    { id: 'Samsung Washing', name: 'Samsung Washing', mrp: '20000', price: 16000, image: Swashing },
+    { id: 'Samsung tv', name: 'Samsung tv', mrp: '300000', price: 240000, image: Stv },
+    { id: 'Samsung vacuum', name: 'Samsung Vacuum', mrp: '400', price: 320, image: Svacuum },
+    { id:'Refrigerator', name: 'Refrigerator', description: 'Double Door Refrigerator', image: Lgfridge, price: 50000, mrp: 60000 },
+  { id: 'Washing Machine', name: 'Washing Machine', description: 'Washing Machine', image: washingmech, price: 15000, mrp: 20000 },
+  { id: 'Home Combo', name: 'Home Combo',mrp: '100000', price: 80000, image: AppCombo },
     { id: 'Appliance 4', name: 'Appliance 4', mrp: '400', price: 320, image: productimg },
     { id: 'Appliance 1', name: 'Appliance 1', mrp: '100', price: 80, image: productimg },
     { id: 'Appliance 2', name: 'Appliance 2', mrp: '200', price: 160, image: productimg },

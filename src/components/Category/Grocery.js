@@ -1,31 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Grocery.css';
-import bannerImage from '../images/GroceryImg/topimg.png';
-import veg from '../images/GroceryImg/veg.png';
-import fruit from '../images/GroceryImg/fruit.png';
-import cuts from '../images/GroceryImg/cut.png';
-import herbs from '../images/GroceryImg/herb.png';
-import atta from '../images/GroceryImg/atta.png';
-import rice from '../images/GroceryImg/rice.png';
-import dals from '../images/GroceryImg/dals.png';
-import oil from '../images/GroceryImg/oil.png';
-import dryfruit from '../images/GroceryImg/dryfruit.png';
-import salt from '../images/GroceryImg/salt.png';
-import healthdrink from '../images/GroceryImg/healthdrink.png';
-import tea from '../images/GroceryImg/tea.png';
-import flavormilk from '../images/GroceryImg/flavormilk.png';
-import juice from '../images/GroceryImg/juice.png';
-import energydrink from '../images/GroceryImg/energydrink.png';
-import softdrink from '../images/GroceryImg/softdrink.png';
-import chaiSnack from '../images/GroceryImg/chaiSnack.png';
-import morningstarter from '../images/GroceryImg/morningstarter.png';
-import pasta from '../images/GroceryImg/pasta.png';
-import sweet from '../images/GroceryImg/sweet.png';
-import Cleaner from '../images/GroceryImg/cleaner.png';
-import Detergent from '../images/GroceryImg/detergent.png';
-import garbagebag from '../images/GroceryImg/garbagebag.png';
-import Freshener from '../images/GroceryImg/freshner.png';
+import {
+  bannerImage,veg,fruit,cuts,herbs,atta,rice,dals,oil,dryfruit,salt,healthdrink,tea,flavormilk,juice,
+  energydrink,softdrink,chaiSnack,morningstarter,pasta,sweet,Cleaner,Detergent,garbagebag,Freshener,
+} from '../images.js'
 
 const categories = [
   {

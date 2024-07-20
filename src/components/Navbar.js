@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Navbar.css';
-import { FaBars, FaArrowLeft, FaUser } from 'react-icons/fa';
+import { FaBars, FaArrowLeft, FaUser, FaShoppingCart, FaSignOutAlt } from 'react-icons/fa';
 import logo from './images/logo.png';
 import { useCookies } from 'react-cookie';
 
@@ -64,12 +64,16 @@ function AppNavbar({ toggleMenu, setSearchQuery }) {
                 <Nav.Link as={Link} to="/" className="user-info">
                   <FaUser className="user-icon" /> {user}
                 </Nav.Link>
-                <Nav.Link as={Link} to="#" onClick={handleLogout}>Logout</Nav.Link>
+                <Nav.Link as={Link} to="#" onClick={handleLogout}>
+                  <FaSignOutAlt className="logout-icon" /> Logout
+                </Nav.Link>
               </>
             ) : (
               <Nav.Link as={Link} to="/login-signup">Sign In</Nav.Link>
             )}
-            <Nav.Link as={Link} to="/cart">Cart</Nav.Link>
+            <Nav.Link as={Link} to="/cart">
+              <FaShoppingCart className="cart-icon" /> Cart
+            </Nav.Link>
             {showBackButton && (
               <button className="back-button" onClick={() => navigate(-1)}>
                 <FaArrowLeft />

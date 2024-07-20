@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation, Navigate } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { useCookies } from 'react-cookie';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AppNavbar from './components/Navbar';
 import SideMenu from './components/SideMenu';
@@ -16,6 +17,8 @@ import SearchResultsPage from './components/SearchResultsPage'; // New Component
 import MotionWrapper from './components/MotionWrapper';
 import Cart from './components/Cart';
 import LoginSignUp from './components/LoginSignUp';
+import Checkout from './components/Checkout'; // Import Checkout component
+import ProductDetail from './components/ProductDetail'; // Import ProductDetail component
 import './App.css';
 
 function App() {
@@ -61,6 +64,10 @@ function App() {
     setCart(cart.map(item => item.id === product.id ? { ...item, quantity: Number(quantity) } : item));
   };
 
+  const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+  const discount = 0; // Add your discount logic here
+  const tax = totalPrice * 0.18; // Example tax calculation (18%)
+
   return (
     <Router>
       <AppContent 
@@ -73,12 +80,15 @@ function App() {
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
         cookies={cookies}
+        totalPrice={totalPrice}
+        discount={discount}
+        tax={tax}
       />
     </Router>
   );
 }
 
-function AppContent({ toggleMenu, isMenuOpen, addToCart, cart, removeFromCart, updateQuantity, searchQuery, setSearchQuery, cookies }) {
+function AppContent({ toggleMenu, isMenuOpen, addToCart, cart, removeFromCart, updateQuantity, searchQuery, setSearchQuery, cookies, totalPrice, discount, tax }) {
   const location = useLocation();
   const isLoginPage = location.pathname === '/login-signup';
 
@@ -132,6 +142,22 @@ function AppContent({ toggleMenu, isMenuOpen, addToCart, cart, removeFromCart, u
                   element={
                     <MotionWrapper>
                       <Cart cartItems={cart} removeFromCart={removeFromCart} updateQuantity={updateQuantity} />
+                    </MotionWrapper>
+                  }
+                />
+                <Route
+                  path="/checkout"
+                  element={
+                    <MotionWrapper>
+                      <Checkout cartItems={cart} totalPrice={totalPrice} discount={discount} tax={tax} />
+                    </MotionWrapper>
+                  }
+                />
+                <Route
+                  path="/product/:productId"
+                  element={
+                    <MotionWrapper>
+                      <ProductDetail addToCart={addToCart}/>
                     </MotionWrapper>
                   }
                 />

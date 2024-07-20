@@ -38,7 +38,7 @@ function Footer() {
           </Col>
           <Col md={12} className="text-center mt-4">
             <p className="copy-right text-light">
-              &copy; {new Date().getFullYear()} GM - Global Mart. All Rights Reserved.
+              &copy; {new Date().getFullYear()} GM - Global Mart. All Rights Reserved.<br/>Use of this website indicates your compliance with our Privacy Policy, Conditions of Carriage, Terms and Conditions.
             </p>
           </Col>
         </Row>
