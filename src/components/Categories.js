@@ -21,7 +21,7 @@ function Categories() {
     <Container className="categories">
       <Row className="justify-content-center">
         {categories.map((category, index) => (
-          <Col md={2} key={index} className="d-flex align-items-stretch">
+          <Col xs={4} sm={4} md={3} lg={2} key={index} className="d-flex align-items-stretch">
             <Link to={`/category/${category.name.toLowerCase()}`} className="category-card text-center">
               <img src={category.image} alt={category.name} className="category-image" />
               <div className="category-name">{category.name}</div>

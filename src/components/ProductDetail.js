@@ -24,9 +24,6 @@ const ProductDetail = ({ addToCart }) => {
     });
   };
 
-  const handleBackToProducts = () => {
-    navigate('/products');
-  };
 
   return (
     <div className="product-detail">
@@ -36,7 +33,7 @@ const ProductDetail = ({ addToCart }) => {
       <p className="mrp">MRP: ${product.mrp}</p>
       <p className="price">Price: ${product.price}</p>
       <button className="btn" onClick={() => {addToCart(product) ; handleBuyNow()}}>Buy Now</button>
-      <button className="btn" onClick={handleBackToProducts} style={{ marginTop: '10px' }}>Back to Products</button>
+      <button className="btn" onClick={() => navigate(-1)} style={{ marginTop: '10px' }}>Back to Products</button>
     </div>
   );
 };

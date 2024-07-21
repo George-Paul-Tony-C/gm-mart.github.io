@@ -1,13 +1,16 @@
+/* Add this to App.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   width: 100%; /* Ensure the App container is full width */
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
 
 .App-content {
@@ -16,40 +19,43 @@
   overflow: hidden; /* Prevent overflow issues */
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .App-header {
+    font-size: calc(8px + 2vmin);
+  }
+
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    height: 30vmin;
+  }
+
+  .product-card {
+    flex: 0 0 calc(50% - 20px);
+  }
+
+  .product {
+    flex: 0 0 calc(50% - 20px);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 576px) {
+  .App-header {
+    font-size: calc(6px + 2vmin);
   }
-  to {
-    transform: rotate(360deg);
+
+  .App-logo {
+    height: 25vmin;
+  }
+
+  .product-card {
+    flex: 0 0 calc(100% - 20px);
+  }
+
+  .product {
+    flex: 0 0 calc(100% - 20px);
+  }
+
+  .scroll-button {
+    display: none;
   }
 }
-/* 
-.hide-footer .footer {
-  display: none;
-}
-
-.hideAppNavbar .navbar {
-  display: none;
-} */

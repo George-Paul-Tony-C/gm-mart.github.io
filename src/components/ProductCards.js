@@ -46,13 +46,13 @@ export const productCategories = [
 
 function ProductCards({ addToCart }) {
   return (
-    <Container className="product-cards">
+    <Container sm={6} className="product-cards">
       {productCategories.map((category, index) => (
         <div key={index} className="product-category">
           <h2 className="product-category-title">{category.title}</h2>
           <Row className="justify-content-center">
             {category.products.map(product => (
-              <Col md={3} className="d-flex align-items-stretch" key={product.id}>
+              <Col xs={5} md={4} lg={3} className="align-items-stretch d-flex " key={product.id}>
                 <Card className="product-card">
                   <Link to={`/product/${product.id}`}>
                     <div className="product-card-image-container">
@@ -66,7 +66,7 @@ function ProductCards({ addToCart }) {
                       <Card.Text className="product-card-mrp">${product.mrp}</Card.Text>
                       <Card.Text className="product-card-price">${product.price}</Card.Text>
                     </div>
-                    <Button variant="primary" className="product-card-add-to-cart-button" onClick={() => addToCart(product)}>
+                    <Button xs={1} variant="primary" className="product-card-add-to-cart-button" onClick={() => addToCart(product)}>
                       <FaShoppingCart /> Add to Cart
                     </Button>
                   </Card.Body>

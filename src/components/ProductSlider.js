@@ -27,12 +27,12 @@ function ProductSlider() {
   };
 
   return (
-    <div className="slider-container">
+    <div xs={12} sm={6} md={4}  lg={3} className="slider-container">
       <div className="product-slider-container">
         <button className="scroll-button left" onClick={scrollLeft}>{'<'}</button>
-        <div className="product-slider" ref={sliderRef}>
+        <div  className="product-slider" ref={sliderRef}>
           {products.map(product => (
-            <div key={product.id} className="product">
+            <div xs={12} sm={6} md={4}  lg={3} key={product.id} className="product">
               <img src={product.image} alt={product.name} className="product-image" />
               <div className="product-name">{product.name}</div>
             </div>

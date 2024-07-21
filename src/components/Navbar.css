@@ -1,11 +1,13 @@
+/* Add this to Navbar.css */
+
 .navbar-container {
   position: relative;
   padding: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   background: linear-gradient(135deg, #001d3d,#054b59, #07869f);
 }
 
-.navbar-logo{
+.navbar-logo {
   width: 130px;
   border-radius: 20px;
   box-shadow: 0 0 20px #001b37;
@@ -52,8 +54,6 @@
   background-color: #8a8a8a;
 }
 
-
-
 .navbar-brand:hover,
 .navbar-brand:focus,
 .navbar-brand:active {
@@ -79,7 +79,6 @@
   }
 }
 
-/* Make the hamburger icon stick to the top left corner when scrolling */
 .menu-toggle.sticky {
   position: fixed;
   top: 10px;
@@ -101,14 +100,14 @@ form {
   display: flex;
 }
 
-/* .navbar {
-  background-color: black !important;
-} */
-
 .searchbarcontainer {
   width: 400px;
   gap: 5px;
   height: 50px;
+}
+
+.searchbarcontainer.visible {
+  display: flex;
 }
 
 .searchbar {
@@ -137,3 +136,31 @@ form {
   margin-right: 5px;
 }
 
+.search-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  /* .searchbarcontainer {
+    display: none;
+  } */
+
+  .searchbarcontainer.visible {
+    display: flex !important;
+  }
+
+  .navbar-collapse {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* .navbar-collapse .nav {
+    display: none;
+  } */
+}

@@ -1,9 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './SideMenu.css';
-import { FaTimes, FaHome, FaMobileAlt, FaTv, FaLaptop, FaTshirt, FaShoppingCart } from 'react-icons/fa';
+import { FaTimes, FaHome, FaMobileAlt, FaTv, FaLaptop, FaTshirt, FaShoppingCart, FaUser, FaSignOutAlt } from 'react-icons/fa';
+import { useCookies } from 'react-cookie';
 
 function SideMenu({ isOpen, toggleMenu }) {
+  const [cookies, , removeCookie] = useCookies(['user']);
+  const user = cookies.user;
+
+  const handleLogout = () => {
+    removeCookie('user');
+  };
+
   return (
     <>
       <div className={`side-menu ${isOpen ? 'open' : ''}`}>
@@ -40,6 +48,25 @@ function SideMenu({ isOpen, toggleMenu }) {
             <li>
               <Link to="/category/grocery" onClick={toggleMenu}>
                 <FaShoppingCart className="menu-icon" /> Grocery
+              </Link>
+            </li>
+            {user && (
+              <>
+                <li>
+                  <Link to="/" onClick={toggleMenu}>
+                    <FaUser className="menu-icon" /> {user}
+                  </Link>
+                </li>
+                <li>
+                  <Link to="#" onClick={handleLogout}>
+                    <FaSignOutAlt className="menu-icon" /> Logout
+                  </Link>
+                </li>
+              </>
+            )}
+            <li>
+              <Link to="/cart" onClick={toggleMenu}>
+                <FaShoppingCart className="menu-icon" /> Cart
               </Link>
             </li>
           </ul>
