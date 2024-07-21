@@ -10,7 +10,7 @@ import {
   // electronics and Appliances
   Fan,Sbuds,SonyHeadphone,washingmech,LgAc,Lgfridge,windowAC,
   AppCombo,Designlap,macbookair,tufgaming,Stv,Swashing,Sfridge,Svacuum,
-  Samsungs23,googlepixel7,Oneplus11,iphone14pro,samsunglogo,xiaomilogo,applelogo,onepluslogo,realmelogo,
+  Samsungs23,googlepixel7,Oneplus11,iphone14pro,
 } from './images.js'
 
 
