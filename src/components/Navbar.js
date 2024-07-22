@@ -96,7 +96,7 @@ function AppNavbar({ toggleMenu, setSearchQuery }) {
           <Nav className="ml-auto d-none d-lg-flex">
             {user ? (
               <>
-                <Nav.Link as={Link} to="/" className="user-info">
+                <Nav.Link as={Link} to="/account" className="user-info">
                   <FaUser className="user-icon" /> {user}
                 </Nav.Link>
                 <Nav.Link as={Link} to="#" onClick={handleLogout}>

@@ -19,6 +19,7 @@ import Cart from './components/Cart';
 import LoginSignUp from './components/LoginSignUp';
 import Checkout from './components/Checkout'; // Import Checkout component
 import ProductDetail from './components/ProductDetail'; // Import ProductDetail component
+import AccountPage from './components/AccountPage';
 import './App.css';
 
 function App() {
@@ -98,6 +99,10 @@ function AppContent({ toggleMenu, isMenuOpen, addToCart, cart, removeFromCart, u
         <>
           <AppNavbar toggleMenu={toggleMenu} setSearchQuery={setSearchQuery} />
           <SideMenu isOpen={isMenuOpen} toggleMenu={toggleMenu} />
+          <Routes>
+          {/* Other routes */}
+          <Route path="/account" element={<AccountPage />} />
+        </Routes>
         </>
       )}
       <div className="App-content">
